@@ -1,4 +1,4 @@
 # Kids' Xilophone
-##### with the use of the AVFoundation library to sync audio, children can play with my Kids' Xilophone  rip off :D
+##### With the use of the AVFoundation library, I have synced audio so my children can play with this cool Kids' Xilophone  rip off :D
 ###### Screenshot
 ![Screenshot](Xilophone.jpg)
