@@ -1,0 +1,33 @@
+//Create a btn for each key and assign a tag number
+// link all buttons to same @IBAction
+    
+// Steps to Play Audio 
+ * 1) Imort Audio library 
+    Import AVFoundation
+ * 2) Add AVAudioPlayerDelegate
+    class ViewController: UIViewController, AVAudioPlayerDelegate {
+ * 3) Declare AVAudioPlayervariable
+    var player: AVAudioPlayer!
+ *** 4) Create an audio Player Func *** 
+    func audioPlayer (audio: String) {
+ * 5) Add the sound path / url
+    let soundUrl = Bundle.main.url(forResource: audio, withExtension: "wav")
+ * 6) Set audioplayer to try/play  sound
+    do { try player = AVAudioPlayer(contentsOf: soundUrl!) }
+ * 7) Catch errors
+    catch { print(error) }
+ * 8) PLAY 
+    player.play()
+//  Whithin the IBAOutlet Btn  call the function
+    audioPlayer(audio: "note"+String(sender.tag))
+
+//Optional Delay functions 
+
+func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+        deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+     }
+     // Implementation in sec
+     delay(2) {
+        print ("hello")
+    } 
