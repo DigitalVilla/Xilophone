@@ -4,4 +4,4 @@ With the use of the AVFoundation library, my children can play with this cool ri
 #### Technologies 
 iOS, Swift
 ##### Screenshot
-![Screenshot](Xilophone.jpg)
+![Screenshot](xilo.png)
